@@ -1,21 +1,19 @@
 (function () {
   "use strict";
 
-  const NISAB_MYR = 29000; // Illustrative 85g gold nisab threshold in MYR
+  const NISAB_MYR = 29000; // Illustrative 85g gold nisab in MYR
 
   const TIER_META = {
-    cash: { name: "Cash Shield Plan", rate: 0.036, defaultGoalName: "My 6-Month Rainy Day Cushion" },
-    balanced: { name: "Balanced Sukuk Plan", rate: 0.058, defaultGoalName: "First Home / Milestone Fund" },
-    growth: { name: "Ethical Growth Plan", rate: 0.078, defaultGoalName: "Long-Term Halal Wealth" }
+    cash: { name: "Cash Shield", rate: 0.036, defaultGoalName: "Emergency Tabung" },
+    balanced: { name: "Balanced Sukuk", rate: 0.058, defaultGoalName: "Rumah Pertama / Kahwin" },
+    growth: { name: "Ethical Growth", rate: 0.078, defaultGoalName: "Long-Term Halal Wealth" }
   };
 
   function formatRM(value) {
     return "RM " + Math.round(value).toLocaleString("en-MY");
   }
 
-  /* ----------------------------------------------------------
-   * 1. Plain English vs. Shariah Structure Jargon Toggle
-   * ---------------------------------------------------------- */
+  /* 1. Simple vs. Shariah Terms Switch */
   const plainBtn = document.getElementById("mode-plain-btn");
   const shariahBtn = document.getElementById("mode-shariah-btn");
   const translatableNodes = document.querySelectorAll("[data-plain][data-shariah]");
@@ -37,9 +35,7 @@
   plainBtn?.addEventListener("click", () => setLanguageMode("plain"));
   shariahBtn?.addEventListener("click", () => setLanguageMode("shariah"));
 
-  /* ----------------------------------------------------------
-   * 2. Interactive Halal Goal & Zakat Calculator
-   * ---------------------------------------------------------- */
+  /* 2. Halal Goal & Zakat Simulator */
   const initialSlider = document.getElementById("initial-slider");
   const monthlySlider = document.getElementById("monthly-slider");
   const yearsSlider = document.getElementById("years-slider");
@@ -94,7 +90,6 @@
 
     const totalDeposits = initial + monthly * months;
 
-    // Monthly compounding for initial lump sum + end-of-month contributions
     let futureValue = initial * Math.pow(1 + monthlyRate, months);
     if (monthlyRate > 0) {
       futureValue += monthly * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
@@ -105,13 +100,12 @@
     const projectedProfit = Math.max(0, futureValue - totalDeposits);
 
     projectedTotalEl.textContent = formatRM(futureValue);
-    gainVsIdleEl.textContent = "+" + formatRM(projectedProfit) + " halal return";
+    gainVsIdleEl.textContent = "+" + formatRM(projectedProfit) + " return";
     barMizanLabel.textContent = formatRM(futureValue);
     barIdleLabel.textContent = formatRM(totalDeposits);
     legendDeposits.textContent = formatRM(totalDeposits);
     legendProfit.textContent = formatRM(projectedProfit);
 
-    // Relative widths (Mizan total = 100%)
     const principalPct = futureValue > 0 ? (totalDeposits / futureValue) * 100 : 100;
     const profitPct = Math.max(0, 100 - principalPct);
 
@@ -119,35 +113,29 @@
     barProfit.style.width = profitPct.toFixed(1) + "%";
     barIdle.style.width = principalPct.toFixed(1) + "%";
 
-    // Zakat estimation
     if (!zakatToggle.checked) {
       zakatCallout.hidden = true;
     } else {
       zakatCallout.hidden = false;
       if (futureValue >= NISAB_MYR) {
         const estZakat = futureValue * 0.025;
-        zakatAmountEl.textContent = formatRM(estZakat) + " / yr (2.5% above nisab)";
-        zakatNoteEl.textContent =
-          "Exceeds estimated RM 29,000 gold nisab. Mizan prepares a 1-click Zakat receipt summary.";
+        zakatAmountEl.textContent = formatRM(estZakat) + "/yr (2.5%)";
+        zakatNoteEl.textContent = "Eligible for 100% LHDN tax rebate.";
       } else {
-        zakatAmountEl.textContent = "RM 0 (Below ~RM 29,000 gold nisab)";
-        zakatNoteEl.textContent =
-          "Mizan alerts you only once your halal savings remain above nisab for 1 lunar year.";
+        zakatAmountEl.textContent = "RM 0 (Below RM 29k nisab)";
+        zakatNoteEl.textContent = "Auto-alerts once above nisab for 1 year.";
       }
     }
 
-    // Keep onboarding modal summary synced
     if (modalRecapText) {
       modalRecapText.textContent =
         TIER_META[activeTier].name +
         " • " +
         formatRM(monthly) +
-        "/mo over " +
+        "/mo × " +
         years +
-        (years === 1 ? " yr" : " yrs") +
-        " (Projected " +
-        formatRM(futureValue) +
-        ")";
+        "y → " +
+        formatRM(futureValue);
     }
   }
 
@@ -160,9 +148,7 @@
     input?.addEventListener("change", updateCalculator);
   });
 
-  /* ----------------------------------------------------------
-   * 3. 30-Second Relevance Quiz (Honest Fit Engine)
-   * ---------------------------------------------------------- */
+  /* 3. Concise 30-Sec Relevance Quiz */
   const quizForm = document.getElementById("relevance-quiz-form");
   const verdictBox = document.getElementById("quiz-verdict");
   const verdictBadge = document.getElementById("verdict-badge");
@@ -172,7 +158,7 @@
 
   let currentQuizRecommendation = {
     tier: "cash",
-    initial: 500,
+    initial: 200,
     monthly: 150,
     years: 2
   };
@@ -184,65 +170,50 @@
     const experience = data.get("experience") || "beginner";
     const budget = Number(data.get("budget") || 150);
 
-    // Honest mismatch case: Day-trading / short-term speculation
     if (priority === "trading") {
       verdictBox.classList.add("not-ideal");
-      verdictBadge.className = "verdict-badge match-low";
-      verdictBadge.textContent = "Honest Answer: Partial Fit Only";
-      verdictPlanName.textContent = "Mizan does not offer day-trading";
+      verdictBadge.className = "fit-badge fit-low";
+      verdictBadge.textContent = "Partial Fit";
+      verdictPlanName.textContent = "No stock-trading — Cash Shield only";
       verdictSummary.textContent =
-        "We want to save your time: Mizan isn't a stock-picking broker. However, active traders often still keep their 3–6 month emergency cash in our riba-free Cash Shield (~3.6% p.a.) so idle cash stays protected.";
-      applyQuizBtn.textContent = "Preview Cash Shield anyway →";
-      currentQuizRecommendation = {
-        tier: "cash",
-        initial: budget * 4,
-        monthly: budget,
-        years: 2
-      };
+        "Mizan doesn't do daily stock picking, though you can park idle cash in Cash Shield (~3.6% p.a., 1-day DuitNow exit).";
+      applyQuizBtn.textContent = "Test Cash Shield →";
+      currentQuizRecommendation = { tier: "cash", initial: budget * 4, monthly: budget, years: 2 };
       return;
     }
 
     verdictBox.classList.remove("not-ideal");
-    verdictBadge.className = "verdict-badge match-high";
-    verdictBadge.textContent = "Strong Fit for You";
-    applyQuizBtn.textContent = "Simulate this plan →";
+    verdictBadge.className = "fit-badge fit-yes";
+    verdictBadge.textContent = "Strong Fit";
+    applyQuizBtn.textContent = "Load into Simulator →";
 
     if (priority === "emergency") {
-      const init = experience === "beginner" ? 200 : 1500;
-      verdictPlanName.textContent = "Recommended: Cash Shield Plan";
+      verdictPlanName.textContent = "Cash Shield Plan";
       verdictSummary.textContent =
-        "Perfect starting point. Build a calm, riba-free safety net at " +
-        formatRM(budget) +
-        "/month with ~3.6% p.a. profit-sharing and 1-day withdrawals whenever life happens.";
+        "Start calm at " + formatRM(budget) + "/mo — ~3.6% p.a. halal profit with 1-day DuitNow cashout.";
       currentQuizRecommendation = {
         tier: "cash",
-        initial: init,
+        initial: experience === "beginner" ? 200 : 1500,
         monthly: budget,
         years: 2
       };
     } else if (priority === "milestone") {
-      const init = experience === "beginner" ? 500 : 3000;
-      verdictPlanName.textContent = "Recommended: Balanced Sukuk Plan";
+      verdictPlanName.textContent = "Balanced Sukuk Plan";
       verdictSummary.textContent =
-        "Great match for a 2–5 year target like a home deposit, wedding, or Umrah. Combines steady Sukuk income with screened ethical equities at " +
-        formatRM(budget) +
-        "/month.";
+        "Ideal for Rumah Pertama, Kahwin, or Umrah at " + formatRM(budget) + "/mo across Sukuk + Halal ETFs.";
       currentQuizRecommendation = {
         tier: "balanced",
-        initial: init,
+        initial: experience === "beginner" ? 500 : 3000,
         monthly: budget,
         years: 4
       };
     } else {
-      const init = experience === "confident" ? 5000 : 1000;
-      verdictPlanName.textContent = "Recommended: Ethical Growth Plan";
+      verdictPlanName.textContent = "Ethical Growth Plan";
       verdictSummary.textContent =
-        "Ideal for 5+ year wealth building. Your " +
-        formatRM(budget) +
-        "/month is invested automatically across globally screened Shariah companies with automated Zakat tracking.";
+        "Great for 5+ yr wealth beyond local deposits — global Shariah ETFs + auto Zakat at " + formatRM(budget) + "/mo.";
       currentQuizRecommendation = {
         tier: "growth",
-        initial: init,
+        initial: experience === "confident" ? 5000 : 1000,
         monthly: budget,
         years: 10
       };
@@ -257,14 +228,10 @@
     monthlySlider.value = String(rec.monthly);
     yearsSlider.value = String(rec.years);
     selectTier(rec.tier);
-
-    const calcPanel = document.getElementById("calculator-panel");
-    calcPanel?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    document.getElementById("calculator-panel")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   });
 
-  /* ----------------------------------------------------------
-   * 4. Persona Card Quick-Load Buttons
-   * ---------------------------------------------------------- */
+  /* 4. Persona Presets */
   const PERSONA_PRESETS = {
     starter: { priority: "emergency", experience: "beginner", budget: "150", initial: 200, monthly: 150, years: 2, tier: "cash" },
     milestone: { priority: "milestone", experience: "some", budget: "500", initial: 3000, monthly: 500, years: 5, tier: "balanced" },
@@ -290,13 +257,11 @@
       yearsSlider.value = String(preset.years);
       selectTier(preset.tier);
 
-      document.getElementById("relevance-check")?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("fit-check")?.scrollIntoView({ behavior: "smooth" });
     });
   });
 
-  /* ----------------------------------------------------------
-   * 5. Accessible Modals & Guided Next-Steps Flows
-   * ---------------------------------------------------------- */
+  /* 5. Modals */
   let lastFocusedTrigger = null;
 
   function openModal(modalId, triggerEl) {
@@ -306,9 +271,7 @@
     modal.hidden = false;
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
-
-    const closeBtn = modal.querySelector("[data-close-modal]");
-    closeBtn?.focus();
+    modal.querySelector("[data-close-modal]")?.focus();
   }
 
   function closeAllModals() {
@@ -323,9 +286,7 @@
   }
 
   document.querySelectorAll("[data-open-modal]").forEach((trigger) => {
-    trigger.addEventListener("click", () => {
-      openModal(trigger.getAttribute("data-open-modal"), trigger);
-    });
+    trigger.addEventListener("click", () => openModal(trigger.getAttribute("data-open-modal"), trigger));
   });
 
   document.querySelectorAll("[data-close-modal]").forEach((btn) => {
@@ -333,17 +294,13 @@
   });
 
   document.querySelectorAll(".modal-backdrop").forEach((backdrop) => {
-    backdrop.addEventListener("click", (event) => {
-      if (event.target === backdrop) {
-        closeAllModals();
-      }
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop) closeAllModals();
     });
   });
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeAllModals();
-    }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeAllModals();
   });
 
   document.getElementById("switch-sample-to-start")?.addEventListener("click", () => {
@@ -356,29 +313,21 @@
     openModal("start-modal");
   });
 
-  // Handle QuickStart Roadmap Form
   const quickStartForm = document.getElementById("QuickStartForm");
   const quickStartSuccess = document.getElementById("quickstart-success");
   const quickStartMsg = document.getElementById("quickstart-success-msg");
 
-  quickStartForm?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const goalTitle = starterGoalInput?.value.trim() || "Halal Savings Plan";
+  quickStartForm?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const goalTitle = starterGoalInput?.value.trim() || "Emergency Tabung";
     const email = document.getElementById("starter-email")?.value.trim() || "your inbox";
 
     quickStartForm.hidden = true;
     quickStartSuccess.hidden = false;
     quickStartMsg.textContent =
-      'Saved "' +
-      goalTitle +
-      '" (' +
-      TIER_META[activeTier].name +
-      ") and sent a copy to " +
-      email +
-      ". Take your time — you can start with RM 50 whenever you are ready.";
+      'Saved "' + goalTitle + '" (' + TIER_META[activeTier].name + ") to " + email + ". Top up RM 50 via DuitNow anytime.";
   });
 
-  // Initial render
   evaluateQuiz();
   updateCalculator();
 })();

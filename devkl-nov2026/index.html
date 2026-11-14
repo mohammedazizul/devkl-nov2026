@@ -1,583 +1,467 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-MY">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mizan — Ethical &amp; Shariah-Compliant Financial Planning, Explained Simply</title>
+  <title>Mizan MY — Halal Wealth &amp; Goal Planner for Malaysians</title>
   <meta
     name="description"
-    content="Understand in 60 seconds how Mizan helps you save riba-free, invest ethically, and automate Zakat — starting from RM 50."
+    content="Save riba-free, invest in Shariah-screened funds, and automate Zakat from RM 50 via DuitNow."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Skip Link for Accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <!-- Top Navigation with Reading Progress / Section Orientation -->
+  <!-- Minimal Sticky Navbar -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="brand" aria-label="Mizan Home">
+      <a href="#" class="brand" aria-label="Mizan Malaysia Home">
         <span class="brand-mark" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <rect x="2" y="2" width="24" height="24" rx="7" stroke="currentColor" stroke-width="2" />
-            <path d="M14 7V21M8 12L14 9L20 12M7 16.5C7 18.2 8.6 19.5 10.5 19.5C12.4 19.5 14 18.2 14 16.5M14 16.5C14 18.2 15.6 19.5 17.5 19.5C19.4 19.5 21 18.2 21 16.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Subtle Bunga Raya / Songket Diamond Motif -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L15.2 8.8L22 12L15.2 15.2L12 22L8.8 15.2L2 12L8.8 8.8L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="2.5" fill="currentColor"/>
           </svg>
         </span>
-        <span class="brand-text">
-          <strong>Mizan</strong>
-          <small>Ethical Wealth</small>
-        </span>
+        <span class="brand-name">Mizan</span>
+        <span class="my-pill">MY</span>
       </a>
 
-      <nav class="main-nav" aria-label="Page sections">
-        <a href="#what-it-does">1. What It Does</a>
-        <a href="#who-it-helps">2. Who It Helps</a>
-        <a href="#relevance-check">3. Is It For Me?</a>
-        <a href="#next-steps">4. What To Do Next</a>
+      <nav class="main-nav" aria-label="Sections">
+        <a href="#what-it-does">What It Does</a>
+        <a href="#who-it-helps">Who It's For</a>
+        <a href="#fit-check">30s Fit Check</a>
+        <a href="#next-steps">Next Steps</a>
       </nav>
 
       <div class="header-actions">
         <button type="button" class="btn btn-ghost btn-sm" data-open-modal="sample-modal">
-          Preview Sample Plan
+          Live Demo
         </button>
-        <a href="#relevance-check" class="btn btn-primary btn-sm">
-          30-Sec Fit Check
+        <a href="#fit-check" class="btn btn-primary btn-sm">
+          Check My Fit
         </a>
       </div>
     </div>
   </header>
 
   <main id="main-content">
-    <!-- HERO: 5-Second Clarity on What Mizan Offers -->
+    <!-- HERO: Ultra-clean, Malaysian context, zero walls of text -->
     <section class="hero">
+      <div class="songket-bg" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow-pill">
-            <span class="status-dot" aria-hidden="true"></span>
-            100% Shariah-Compliant &bull; Zero Financial Jargon &bull; Start from RM 50
+          <div class="eyebrow">
+            <span class="flag-dot" aria-hidden="true">🇲🇾</span>
+            Built for Malaysians &bull; SC Shariah-Screened
           </div>
 
           <h1>
-            Plan and grow your money ethically — <span class="accent-serif">without needing a finance degree.</span>
+            Halal saving &amp; investing, <span class="text-gradient">made simple.</span>
           </h1>
 
-          <p class="hero-lead">
-            New here? Here is Mizan in one sentence: <strong>we help you build an emergency safety net, invest in screened halal funds, and calculate Zakat automatically</strong> — all in one calm app, with no lock-ins.
+          <p class="hero-sub">
+            Grow idle ringgit riba-free, save for life goals, and auto-track Zakat in one app — starting from <strong>RM 50 via DuitNow</strong>.
           </p>
 
           <div class="hero-ctas">
-            <a href="#relevance-check" class="btn btn-primary btn-lg">
-              Check if Mizan fits you (30 sec)
+            <a href="#fit-check" class="btn btn-primary btn-lg">
+              Is Mizan for me? (30 sec)
               <span aria-hidden="true">&rarr;</span>
             </a>
-            <a href="#calculator-panel" class="btn btn-secondary btn-lg">
-              Try the Halal Goal Calculator
-            </a>
+            <button type="button" class="btn btn-secondary btn-lg" data-open-modal="sample-modal">
+              See Sample App
+            </button>
           </div>
 
-          <ul class="trust-strip" aria-label="Key guarantees">
-            <li>
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M16.6 5.8L8.1 14.3L3.4 9.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              Independently Shariah-screened
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M16.6 5.8L8.1 14.3L3.4 9.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              Withdraw anytime, RM 0 exit fee
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M16.6 5.8L8.1 14.3L3.4 9.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              Open to Muslims &amp; non-Muslims
-            </li>
-          </ul>
+          <div class="trust-pills" aria-label="Highlights">
+            <span>✓ RM 0 lock-in</span>
+            <span>✓ DuitNow / FPX</span>
+            <span>✓ Works alongside ASB &amp; TH</span>
+          </div>
         </div>
 
-        <!-- Visual At-A-Glance Card: Explains the whole product visually -->
-        <aside class="hero-card" aria-label="At-a-glance summary of how Mizan works">
-          <div class="hero-card-header">
+        <!-- Sleek App Mockup Card -->
+        <aside class="app-preview-card" aria-label="Mizan app snapshot">
+          <div class="app-card-top">
             <div>
-              <span class="card-kicker">60-Second Overview</span>
-              <h2>How your money works inside Mizan</h2>
+              <span class="label-xs">Total Halal Balance</span>
+              <div class="balance-row">
+                <strong>RM 18,640</strong>
+                <span class="profit-badge">+RM 1,190 halal return</span>
+              </div>
             </div>
-            <span class="badge-verified">Riba-Free</span>
+            <span class="verified-chip">100% Riba-Free</span>
           </div>
 
-          <div class="snapshot-buckets">
-            <div class="bucket-item">
-              <div class="bucket-icon bucket-emerald" aria-hidden="true">01</div>
-              <div class="bucket-body">
-                <div class="bucket-title-row">
-                  <h3>Rainy-Day Cash Shield</h3>
-                  <span class="bucket-tag">~3.6% p.a.*</span>
+          <div class="goal-mini-list">
+            <div class="goal-mini-item">
+              <div class="goal-icon bg-jade">🛡️</div>
+              <div class="goal-info">
+                <div class="goal-line">
+                  <strong>Emergency Tabung</strong>
+                  <span class="rate-tag">~3.6% p.a.</span>
                 </div>
-                <p>Keep emergency cash safe from interest (riba) while earning daily halal profit-sharing returns.</p>
+                <small>Next-day cashout to any local bank</small>
               </div>
             </div>
 
-            <div class="bucket-item">
-              <div class="bucket-icon bucket-gold" aria-hidden="true">02</div>
-              <div class="bucket-body">
-                <div class="bucket-title-row">
-                  <h3>Life-Goal Halal Portfolios</h3>
-                  <span class="bucket-tag">1 – 15+ yrs</span>
+            <div class="goal-mini-item">
+              <div class="goal-icon bg-gold">🏠</div>
+              <div class="goal-info">
+                <div class="goal-line">
+                  <strong>Rumah Pertama &amp; Kahwin</strong>
+                  <span class="rate-tag">~5.8% p.a.</span>
                 </div>
-                <p>Save toward a home deposit, marriage, Umrah/Hajj, or retirement in screened global ethical funds.</p>
+                <small>Global &amp; Malaysian Sukuk + Halal ETFs</small>
               </div>
             </div>
 
-            <div class="bucket-item">
-              <div class="bucket-icon bucket-sage" aria-hidden="true">03</div>
-              <div class="bucket-body">
-                <div class="bucket-title-row">
-                  <h3>Auto-Zakat &amp; Cleansing</h3>
-                  <span class="bucket-tag">Built-in</span>
+            <div class="goal-mini-item">
+              <div class="goal-icon bg-sky">🕋</div>
+              <div class="goal-info">
+                <div class="goal-line">
+                  <strong>Auto-Zakat &amp; Cleansing</strong>
+                  <span class="rate-tag">PPZ Ready</span>
                 </div>
-                <p>No spreadsheets. Mizan tracks your <em>nisab</em> threshold and prepares an optional Zakat summary.</p>
+                <small>Tracks 85g gold nisab automatically</small>
               </div>
             </div>
           </div>
 
-          <div class="hero-card-footer">
-            <div>
-              <span class="fee-label">Transparent annual fee</span>
-              <strong>0.45% p.a.</strong> <span class="muted-inline">(RM 0.38/month per RM 1,000)</span>
-            </div>
-            <button type="button" class="text-link-btn" data-open-modal="sample-modal">
-              See sample dashboard &rarr;
-            </button>
+          <div class="app-card-footer">
+            <span>All-in fee: <strong>0.45% p.a.</strong> (RM 0.38/mo per RM 1k)</span>
+            <button type="button" class="link-btn" data-open-modal="sample-modal">Explore &rarr;</button>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- SECTION 1: WHAT THE PRODUCT DOES (With Plain-English / Islamic Finance Translator) -->
-    <section id="what-it-does" class="section section-alt">
+    <!-- SECTION 1: WHAT IT DOES (3 Crisp Bento Cards + Jargon Switch) -->
+    <section id="what-it-does" class="section">
       <div class="container">
-        <div class="section-header split-header">
+        <div class="section-head-inline">
           <div>
-            <span class="section-step">Part 1 &bull; What Mizan Does</span>
-            <h2>Everything explained in plain human words</h2>
-            <p>
-              Most financial websites throw terms like <em>Wakalah</em>, <em>Sukuk</em>, and <em>Asset Allocation</em> at you on page one. Flip the switch to compare everyday language with the formal Shariah structure behind it.
-            </p>
+            <span class="step-kicker">01 &bull; What It Does</span>
+            <h2>Three things, zero jargon.</h2>
           </div>
 
-          <!-- Jargon Toggle -->
-          <div class="language-toggle-box" role="group" aria-label="Explanation mode">
-            <span class="toggle-caption">Explanation style:</span>
-            <div class="segmented-control">
-              <button
-                type="button"
-                class="seg-btn active"
-                id="mode-plain-btn"
-                aria-pressed="true"
-              >
-                Plain English
-              </button>
-              <button
-                type="button"
-                class="seg-btn"
-                id="mode-shariah-btn"
-                aria-pressed="false"
-              >
-                Shariah Structure
-              </button>
-            </div>
+          <div class="segmented" role="group" aria-label="Language style">
+            <button type="button" class="seg-btn active" id="mode-plain-btn" aria-pressed="true">
+              Simple Terms
+            </button>
+            <button type="button" class="seg-btn" id="mode-shariah-btn" aria-pressed="false">
+              Shariah Terms
+            </button>
           </div>
         </div>
 
-        <div class="pillars-grid">
-          <article class="pillar-card">
-            <div class="pillar-top">
-              <span class="pillar-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 3L4 7V12C4 16.97 7.41 21.6 12 22.8C16.59 21.6 20 16.97 20 12V7L12 3Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
-                  <path d="M9 12.2L11.1 14.3L15.4 10" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <span class="pillar-pill" data-plain="Protect &amp; Park Cash" data-shariah="Commodity Murabahah / Cash Trust">Protect &amp; Park Cash</span>
+        <div class="bento-3">
+          <article class="bento-card">
+            <div class="bento-top">
+              <span class="bento-icon" aria-hidden="true">💧</span>
+              <span class="bento-tag" data-plain="Park Cash" data-shariah="Islamic Money Market">Park Cash</span>
             </div>
-            <h3 data-plain="Stop leaving savings idle in zero-return accounts" data-shariah="Halal Liquidity Management (Riba-Free)">
-              Stop leaving savings idle in zero-return accounts
+            <h3 data-plain="Beat 0% bank accounts, riba-free" data-shariah="Commodity Murabahah Cash Pot">
+              Beat 0% bank accounts, riba-free
             </h3>
             <p
-              class="pillar-desc"
-              data-plain="Put your emergency savings into a low-risk halal cash pot. It earns steady profit-sharing returns without conventional bank interest, and you can withdraw back to your bank in 1 business day."
-              data-shariah="Funds are placed in Islamic money market instruments and short-term Murabahah deposits with licensed Islamic banks — zero conventional interest (riba), accrued daily with T+1 liquidity."
+              data-plain="Earn daily halal profit on your rainy-day cash. Withdraw via DuitNow in 1 working day."
+              data-shariah="Placed with licensed Malaysian Islamic banks via Murabahah deposits — zero riba, T+1 liquidity."
             >
-              Put your emergency savings into a low-risk halal cash pot. It earns steady profit-sharing returns without conventional bank interest, and you can withdraw back to your bank in 1 business day.
+              Earn daily halal profit on your rainy-day cash. Withdraw via DuitNow in 1 working day.
             </p>
-            <div class="pillar-example">
-              <strong>Best for:</strong> 3–6 months of living expenses, road tax, or upcoming bills.
-            </div>
           </article>
 
-          <article class="pillar-card">
-            <div class="pillar-top">
-              <span class="pillar-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 19H20M6 15L10.5 10.5L13.5 13.5L18.5 7.5M18.5 7.5H14.5M18.5 7.5V11.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <span class="pillar-pill" data-plain="Grow for Life Milestones" data-shariah="Sukuk &amp; Shariah Equity ETFs">Grow for Life Milestones</span>
+          <article class="bento-card">
+            <div class="bento-top">
+              <span class="bento-icon" aria-hidden="true">🌱</span>
+              <span class="bento-tag" data-plain="Grow Goals" data-shariah="Sukuk &amp; Shariah ETFs">Grow Goals</span>
             </div>
-            <h3 data-plain="Invest automatically in screened ethical companies" data-shariah="Wakalah Bi Al-Istithmar Goal Portfolios">
-              Invest automatically in screened ethical companies
+            <h3 data-plain="Auto-invest for big milestones" data-shariah="Wakalah Screened Portfolios">
+              Auto-invest for big milestones
             </h3>
             <p
-              class="pillar-desc"
-              data-plain="Tell Mizan your goal and timeline. We automatically divide your money across ethical real-economy companies and asset-backed bonds — strictly excluding conventional debt, gambling, alcohol, tobacco, and weapons."
-              data-shariah="Managed under a Wakalah mandate across global Sukuk and equities passing AAOIFI &amp; SC Malaysia two-tier screening (business activity screen + &lt;33% financial debt ratio thresholds)."
+              data-plain="Pick your target year. We invest across real-economy halal companies — zero gambling, liquor, or riba debt."
+              data-shariah="Diversified across Sukuk &amp; global equities passing SC Malaysia &amp; AAOIFI debt and sector screens."
             >
-              Tell Mizan your goal and timeline. We automatically divide your money across ethical real-economy companies and asset-backed bonds — strictly excluding conventional debt, gambling, alcohol, tobacco, and weapons.
+              Pick your target year. We invest across real-economy halal companies — zero gambling, liquor, or riba debt.
             </p>
-            <div class="pillar-example">
-              <strong>Best for:</strong> First home deposit, marriage fund, children's education, Umrah/Hajj.
-            </div>
           </article>
 
-          <article class="pillar-card">
-            <div class="pillar-top">
-              <span class="pillar-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.9"/>
-                  <path d="M12 7.5V12L15 14" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <span class="pillar-pill" data-plain="Peace-of-Mind Compliance" data-shariah="Haul, Nisab &amp; Ta'widh Purification">Peace-of-Mind Compliance</span>
+          <article class="bento-card">
+            <div class="bento-top">
+              <span class="bento-icon" aria-hidden="true">✨</span>
+              <span class="bento-tag" data-plain="Stay Pure" data-shariah="Haul &amp; Nisab Engine">Stay Pure</span>
             </div>
-            <h3 data-plain="Never stress over Zakat math or purity checks" data-shariah="Automated Zakat Accounting &amp; Dividend Cleansing">
-              Never stress over Zakat math or purity checks
+            <h3 data-plain="Zakat math done for you" data-shariah="Automated Zakat &amp; Purification">
+              Zakat math done for you
             </h3>
             <p
-              class="pillar-desc"
-              data-plain="If you pay Zakat, Mizan tracks your 1-year holding period and gold threshold automatically, then gives you a clear number you can pay to your state Zakat body or preferred charity. Non-Muslim? Simply toggle Zakat tracking off."
-              data-shariah="Tracks lunar haul (354 days) against live local gold nisab (85g) and calculates exact dividend purification ratios if an underlying company earns &lt;5% incidental non-compliant income."
+              data-plain="Get a clean annual summary ready for state Zakat (tax-rebate eligible). Non-Muslim? Toggle it off anytime."
+              data-shariah="Tracks 354-day lunar haul against Malaysia's gold nisab plus exact dividend purification ratios."
             >
-              If you pay Zakat, Mizan tracks your 1-year holding period and gold threshold automatically, then gives you a clear number you can pay to your state Zakat body or preferred charity. Non-Muslim? Simply toggle Zakat tracking off.
+              Get a clean annual summary ready for state Zakat (tax-rebate eligible). Non-Muslim? Toggle it off anytime.
             </p>
-            <div class="pillar-example">
-              <strong>Best for:</strong> Staying organized at year-end without manual spreadsheets.
-            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: WHO IT HELPS (And Honest "Who It's Not For") -->
-    <section id="who-it-helps" class="section">
+    <!-- SECTION 2: WHO IT HELPS (Scannable Personas + Honest Filter) -->
+    <section id="who-it-helps" class="section section-soft">
       <div class="container">
-        <div class="section-header">
-          <span class="section-step">Part 2 &bull; Who Mizan Helps</span>
-          <h2>Built for real people at different stages — not Wall Street</h2>
-          <p>
-            See yourself in one of these situations? Click any profile to jump straight to a tailored setup below.
-          </p>
+        <div class="section-head">
+          <span class="step-kicker">02 &bull; Who It Helps</span>
+          <h2>Who uses Mizan?</h2>
         </div>
 
         <div class="persona-grid">
           <div class="persona-card">
-            <div class="persona-badge">Starting Out</div>
-            <h3>The First-Time Earner</h3>
-            <blockquote class="persona-quote">
-              &ldquo;I have RM 100–RM 300 left after bills, and I don't know where to start without making mistakes.&rdquo;
-            </blockquote>
-            <ul class="persona-benefits">
-              <li>Start with as little as RM 50 — no minimum balance penalty</li>
-              <li>Step-by-step emergency fund builder before taking market risk</li>
-              <li>Plain-language explanations on every screen</li>
+            <div class="persona-top">
+              <span class="persona-chip">Fresh Grad / Starter</span>
+              <span class="persona-amt">RM 50–250/mo</span>
+            </div>
+            <h3>First-Time Saver</h3>
+            <p class="persona-quote">&ldquo;Just started working in KL — want to build savings safely without riba.&rdquo;</p>
+            <ul class="mini-checks">
+              <li>Start from RM 50, zero minimum balance</li>
+              <li>Guided emergency tabung first</li>
             </ul>
-            <button type="button" class="persona-select-btn" data-preset="starter">
-              Load this profile in calculator &rarr;
+            <button type="button" class="preset-btn" data-preset="starter">
+              Try Starter numbers &rarr;
             </button>
           </div>
 
           <div class="persona-card">
-            <div class="persona-badge">Planning Milestones</div>
-            <h3>The Busy Professional or Parent</h3>
-            <blockquote class="persona-quote">
-              &ldquo;I earn decently, but my savings sit scattered across bank accounts losing value to inflation.&rdquo;
-            </blockquote>
-            <ul class="persona-benefits">
-              <li>Separate goal buckets (House, Kids' Uni, Hajj, Retirement)</li>
-              <li>Automated monthly payday deposit so saving happens first</li>
-              <li>Automatic rebalancing as your target date gets closer</li>
+            <div class="persona-top">
+              <span class="persona-chip">Young Family / Pro</span>
+              <span class="persona-amt">RM 300–800/mo</span>
+            </div>
+            <h3>Milestone Planner</h3>
+            <p class="persona-quote">&ldquo;Saving for Rumah Pertama, kids' SSPN/uni fund, or Umrah on autopilot.&rdquo;</p>
+            <ul class="mini-checks">
+              <li>Separate pots for every family goal</li>
+              <li>Auto-debit right after payday</li>
             </ul>
-            <button type="button" class="persona-select-btn" data-preset="milestone">
-              Load this profile in calculator &rarr;
+            <button type="button" class="preset-btn" data-preset="milestone">
+              Try Milestone numbers &rarr;
             </button>
           </div>
 
           <div class="persona-card">
-            <div class="persona-badge">Values-Driven</div>
-            <h3>The Conscious &amp; Ethical Investor</h3>
-            <blockquote class="persona-quote">
-              &ldquo;Whether for faith or personal ethics, I refuse to profit from predatory debt, weapons, or gambling.&rdquo;
-            </blockquote>
-            <ul class="persona-benefits">
-              <li>Full holding transparency — see every company you own</li>
-              <li>Strict debt-ratio &amp; ethical sector screening audited quarterly</li>
-              <li>Optional Zakat tracker (easily toggled on or off)</li>
+            <div class="persona-top">
+              <span class="persona-chip">Muslim &amp; Non-Muslim</span>
+              <span class="persona-amt">RM 1,000+/mo</span>
+            </div>
+            <h3>Ethical Wealth Builder</h3>
+            <p class="persona-quote">&ldquo;Want global growth beyond local deposits — strictly ethical &amp; transparent.&rdquo;</p>
+            <ul class="mini-checks">
+              <li>Global tech &amp; healthcare Shariah ETFs</li>
+              <li>Full company-by-company holdings view</li>
             </ul>
-            <button type="button" class="persona-select-btn" data-preset="ethical">
-              Load this profile in calculator &rarr;
+            <button type="button" class="preset-btn" data-preset="ethical">
+              Try Growth numbers &rarr;
             </button>
           </div>
         </div>
 
-        <!-- Radical Honesty Box: Who It Is NOT For -->
-        <div class="honesty-banner" role="note" aria-label="Who Mizan is not built for">
-          <div class="honesty-icon" aria-hidden="true">!</div>
-          <div class="honesty-content">
-            <strong>When Mizan is <em>not</em> the right fit for you:</strong>
-            <p>
-              If you want to day-trade individual stocks, speculate on meme coins/crypto leverage, or chase &ldquo;guaranteed 20% monthly returns,&rdquo; Mizan isn't for you. We only build steady, diversified, long-term financial plans.
-            </p>
-          </div>
+        <div class="not-for-bar" role="note">
+          <span class="not-pill">Not for everyone</span>
+          <p>
+            Looking for <strong>day-trading, forex, or crypto speculation</strong>? Mizan isn't built for that — we only do calm, long-term halal wealth.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3: INTERACTIVE 30-SEC RELEVANCE QUIZ + HALAL SAVINGS CALCULATOR -->
-    <section id="relevance-check" class="section section-interactive">
+    <!-- SECTION 3: 30-SEC FIT CHECK + LIVE SIMULATOR -->
+    <section id="fit-check" class="section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-step">Part 3 &bull; Is It Relevant To You?</span>
-          <h2>Find out in 30 seconds — and test your numbers</h2>
-          <p>
-            Answer 3 quick questions on the left (no email needed) to get an honest recommendation, or drag the sliders on the right to project your halal goal.
-          </p>
+        <div class="section-head">
+          <span class="step-kicker">03 &bull; Is It Relevant To You?</span>
+          <h2>Tap 3 options to check your fit.</h2>
         </div>
 
-        <div class="interactive-workbench">
-          <!-- LEFT: 30-Second Relevance Quiz -->
-          <div class="quiz-card" aria-labelledby="quiz-heading">
-            <div class="card-header-row">
-              <h3 id="quiz-heading">30-Second Relevance Check</h3>
-              <span class="quiz-progress-pill" id="quiz-progress-label">3 quick taps</span>
-            </div>
-
+        <div class="workbench">
+          <!-- Left: Ultra-Clean 3-Tap Quiz -->
+          <div class="panel quiz-panel">
             <form id="relevance-quiz-form">
-              <!-- Question 1 -->
-              <fieldset class="quiz-group">
-                <legend><span class="q-num">1</span> What is your #1 money priority right now?</legend>
-                <div class="choice-list">
-                  <label class="choice-chip">
+              <div class="q-block">
+                <label class="q-title"><span class="q-idx">1</span> Your main goal right now</label>
+                <div class="chip-grid-2">
+                  <label class="tap-chip">
                     <input type="radio" name="priority" value="emergency" checked />
-                    <span>Build a safe, riba-free emergency buffer</span>
+                    <span>🛡️ Emergency Cash</span>
                   </label>
-                  <label class="choice-chip">
+                  <label class="tap-chip">
                     <input type="radio" name="priority" value="milestone" />
-                    <span>Save for a 2–5 year goal (Home, Wedding, Umrah)</span>
+                    <span>🏠 Home / Kahwin / Umrah</span>
                   </label>
-                  <label class="choice-chip">
+                  <label class="tap-chip">
                     <input type="radio" name="priority" value="wealth" />
-                    <span>Grow long-term wealth ethically (5+ years)</span>
+                    <span>📈 Long-Term Wealth</span>
                   </label>
-                  <label class="choice-chip">
+                  <label class="tap-chip">
                     <input type="radio" name="priority" value="trading" />
-                    <span>Pick daily stocks or trade short-term swings</span>
+                    <span>⚡ Daily Stock Trading</span>
                   </label>
                 </div>
-              </fieldset>
+              </div>
 
-              <!-- Question 2 -->
-              <fieldset class="quiz-group">
-                <legend><span class="q-num">2</span> How comfortable are you with investing?</legend>
-                <div class="choice-grid-3">
-                  <label class="choice-chip compact">
+              <div class="q-block">
+                <label class="q-title"><span class="q-idx">2</span> Experience level</label>
+                <div class="chip-grid-3">
+                  <label class="tap-chip">
                     <input type="radio" name="experience" value="beginner" checked />
-                    <span>Brand new</span>
+                    <span>Newbie</span>
                   </label>
-                  <label class="choice-chip compact">
+                  <label class="tap-chip">
                     <input type="radio" name="experience" value="some" />
-                    <span>Have some savings</span>
+                    <span>Have ASB / TH</span>
                   </label>
-                  <label class="choice-chip compact">
+                  <label class="tap-chip">
                     <input type="radio" name="experience" value="confident" />
-                    <span>Experienced</span>
+                    <span>Investor</span>
                   </label>
                 </div>
-              </fieldset>
+              </div>
 
-              <!-- Question 3 -->
-              <fieldset class="quiz-group">
-                <legend><span class="q-num">3</span> Roughly how much could you set aside monthly?</legend>
-                <div class="choice-grid-3">
-                  <label class="choice-chip compact">
+              <div class="q-block">
+                <label class="q-title"><span class="q-idx">3</span> Monthly saving comfort</label>
+                <div class="chip-grid-3">
+                  <label class="tap-chip">
                     <input type="radio" name="budget" value="150" checked />
                     <span>RM 50–250</span>
                   </label>
-                  <label class="choice-chip compact">
+                  <label class="tap-chip">
                     <input type="radio" name="budget" value="500" />
                     <span>RM 300–800</span>
                   </label>
-                  <label class="choice-chip compact">
+                  <label class="tap-chip">
                     <input type="radio" name="budget" value="1200" />
                     <span>RM 1,000+</span>
                   </label>
                 </div>
-              </fieldset>
+              </div>
             </form>
 
-            <!-- Live Personalized Verdict -->
-            <div class="verdict-box" id="quiz-verdict" aria-live="polite">
-              <div class="verdict-header">
-                <span class="verdict-badge match-high" id="verdict-badge">Strong Fit for You</span>
-                <span class="verdict-plan" id="verdict-plan-name">Recommended: Cash Shield Plan</span>
+            <!-- Crisp Verdict Card -->
+            <div class="verdict-card" id="quiz-verdict" aria-live="polite">
+              <div class="verdict-top">
+                <span class="fit-badge fit-yes" id="verdict-badge">95% Match</span>
+                <strong id="verdict-plan-name">Cash Shield Plan</strong>
               </div>
-              <p class="verdict-summary" id="verdict-summary">
-                Since you are starting out and prioritizing safety, Mizan's Rainy-Day Cash Shield lets you start with RM 150/month with zero market swing stress and next-day withdrawals.
+              <p id="verdict-summary">
+                Start stress-free at RM 150/mo with ~3.6% p.a. halal returns and next-day DuitNow cashout.
               </p>
-              <div class="verdict-actions">
+              <div class="verdict-cta-row">
                 <button type="button" class="btn btn-primary btn-sm" id="apply-quiz-to-calc">
-                  Simulate this plan &rarr;
+                  Load into Simulator &rarr;
                 </button>
-                <a href="#next-steps" class="verdict-next-link">See your next step</a>
+                <a href="#next-steps" class="link-btn">Next step</a>
               </div>
             </div>
           </div>
 
-          <!-- RIGHT: Interactive Halal Goal & Zakat Calculator -->
-          <div class="calc-card" id="calculator-panel" aria-labelledby="calc-heading">
-            <div class="card-header-row">
-              <div>
-                <h3 id="calc-heading">Halal Goal &amp; Zakat Simulator</h3>
-                <p class="card-sub">Adjust any slider to see how consistent ethical saving adds up.</p>
+          <!-- Right: Clean Visual Calculator -->
+          <div class="panel calc-panel" id="calculator-panel">
+            <div class="calc-top-bar">
+              <div class="tier-pills" role="radiogroup" aria-label="Plan type">
+                <button type="button" class="tier-btn active" data-tier="cash">
+                  Cash Shield <small>3.6%</small>
+                </button>
+                <button type="button" class="tier-btn" data-tier="balanced">
+                  Balanced <small>5.8%</small>
+                </button>
+                <button type="button" class="tier-btn" data-tier="growth">
+                  Growth <small>7.8%</small>
+                </button>
               </div>
-              <label class="zakat-switch" title="Include estimated annual 2.5% Zakat calculation">
+
+              <label class="zakat-pill">
                 <input type="checkbox" id="zakat-toggle" checked />
-                <span>Track 2.5% Zakat</span>
+                <span>Zakat 2.5%</span>
               </label>
             </div>
 
-            <!-- Portfolio Tier Selector -->
-            <div class="tier-selector" role="radiogroup" aria-label="Portfolio strategy">
-              <button type="button" class="tier-btn active" data-tier="cash" data-rate="0.036">
-                <strong>Cash Shield</strong>
-                <span>~3.6% p.a. &bull; Very Low Risk</span>
-              </button>
-              <button type="button" class="tier-btn" data-tier="balanced" data-rate="0.058">
-                <strong>Balanced Sukuk</strong>
-                <span>~5.8% p.a. &bull; Moderate</span>
-              </button>
-              <button type="button" class="tier-btn" data-tier="growth" data-rate="0.078">
-                <strong>Ethical Growth</strong>
-                <span>~7.8% p.a. &bull; Long-Term</span>
-              </button>
-            </div>
-
-            <!-- Sliders -->
-            <div class="sliders-stack">
-              <div class="slider-field">
-                <div class="slider-label-row">
-                  <label for="initial-slider">Starting deposit</label>
+            <div class="sliders">
+              <div class="slider-row">
+                <div class="slider-head">
+                  <label for="initial-slider">Start with</label>
                   <output id="initial-output" for="initial-slider">RM 1,000</output>
                 </div>
-                <input
-                  type="range"
-                  id="initial-slider"
-                  min="50"
-                  max="50000"
-                  step="50"
-                  value="1000"
-                />
+                <input type="range" id="initial-slider" min="50" max="50000" step="50" value="1000" />
               </div>
 
-              <div class="slider-field">
-                <div class="slider-label-row">
-                  <label for="monthly-slider">Monthly contribution</label>
+              <div class="slider-row">
+                <div class="slider-head">
+                  <label for="monthly-slider">Monthly top-up</label>
                   <output id="monthly-output" for="monthly-slider">RM 250 / mo</output>
                 </div>
-                <input
-                  type="range"
-                  id="monthly-slider"
-                  min="50"
-                  max="5000"
-                  step="50"
-                  value="250"
-                />
+                <input type="range" id="monthly-slider" min="50" max="5000" step="50" value="250" />
               </div>
 
-              <div class="slider-field">
-                <div class="slider-label-row">
-                  <label for="years-slider">Timeframe</label>
+              <div class="slider-row">
+                <div class="slider-head">
+                  <label for="years-slider">Duration</label>
                   <output id="years-output" for="years-slider">5 years</output>
                 </div>
-                <input
-                  type="range"
-                  id="years-slider"
-                  min="1"
-                  max="20"
-                  step="1"
-                  value="5"
-                />
+                <input type="range" id="years-slider" min="1" max="20" step="1" value="5" />
               </div>
             </div>
 
-            <!-- Results Dashboard -->
-            <div class="calc-results" aria-live="polite">
-              <div class="result-primary">
+            <div class="calc-output-box" aria-live="polite">
+              <div class="big-projection">
                 <div>
-                  <span class="result-label">Projected Halal Plan Value</span>
-                  <div class="result-big-number" id="projected-total">RM 17,450</div>
+                  <span class="label-xs">Projected Halal Value</span>
+                  <div class="big-rm" id="projected-total">RM 17,450</div>
                 </div>
-                <div class="gain-pill" id="gain-vs-idle">
-                  +RM 1,450 halal profit
-                </div>
+                <span class="profit-badge" id="gain-vs-idle">+RM 1,450 return</span>
               </div>
 
-              <!-- Visual Stacked Bar Comparison -->
-              <div class="comparison-bars" aria-hidden="true">
-                <div class="bar-row">
-                  <div class="bar-meta">
-                    <span>With Mizan</span>
+              <div class="bars-box" aria-hidden="true">
+                <div class="bar-line">
+                  <div class="bar-labels">
+                    <span>Mizan Plan</span>
                     <strong id="bar-mizan-label">RM 17,450</strong>
                   </div>
                   <div class="bar-track">
-                    <div class="bar-segment seg-principal" id="bar-principal" style="width: 75%"></div>
-                    <div class="bar-segment seg-profit" id="bar-profit" style="width: 25%"></div>
+                    <div class="bar-seg seg-principal" id="bar-principal" style="width: 80%"></div>
+                    <div class="bar-seg seg-profit" id="bar-profit" style="width: 20%"></div>
                   </div>
                 </div>
 
-                <div class="bar-row">
-                  <div class="bar-meta">
-                    <span>Left idle in 0% account</span>
+                <div class="bar-line">
+                  <div class="bar-labels">
+                    <span>0% Current Account</span>
                     <strong id="bar-idle-label">RM 16,000</strong>
                   </div>
                   <div class="bar-track">
-                    <div class="bar-segment seg-idle" id="bar-idle" style="width: 75%"></div>
+                    <div class="bar-seg seg-idle" id="bar-idle" style="width: 80%"></div>
                   </div>
                 </div>
               </div>
 
-              <div class="bar-legend">
-                <span><i class="dot dot-principal"></i> Your deposits (<span id="legend-deposits">RM 16,000</span>)</span>
-                <span><i class="dot dot-profit"></i> Projected halal return (<span id="legend-profit">RM 1,450</span>)</span>
+              <div class="mini-legend">
+                <span><i class="dot dot-p"></i>Principal: <strong id="legend-deposits">RM 16,000</strong></span>
+                <span><i class="dot dot-g"></i>Halal profit: <strong id="legend-profit">RM 1,450</strong></span>
               </div>
 
-              <div class="zakat-callout" id="zakat-callout">
-                <div>
-                  <strong>Estimated Final-Year Zakat:</strong>
-                  <span id="zakat-amount">RM 0 (Below ~RM 29,000 gold nisab)</span>
-                </div>
-                <small id="zakat-note">Mizan alerts you only if your balance stays above nisab for 1 lunar year.</small>
+              <div class="zakat-mini" id="zakat-callout">
+                <span>🕋 Est. Zakat: <strong id="zakat-amount">RM 0 (Below RM 29k nisab)</strong></span>
+                <small id="zakat-note">Tax-rebate receipt ready once above nisab.</small>
               </div>
 
-              <p class="calc-disclaimer">
-                *Illustrative projections net of 0.45% p.a. Mizan fee. Returns are based on historical Islamic money market / Sukuk / Shariah equity benchmarks and are not guaranteed.
+              <p class="tiny-note">
+                Illustrative returns net of 0.45% p.a. fee; non-guaranteed.
               </p>
             </div>
           </div>
@@ -585,90 +469,66 @@
       </div>
     </section>
 
-    <!-- SECTION 4: WHAT THE VISITOR CAN DO NEXT (3 Low-Pressure Paths + Plain-English FAQ) -->
-    <section id="next-steps" class="section">
+    <!-- SECTION 4: WHAT TO DO NEXT (3 Crisp Choices + Compact FAQ) -->
+    <section id="next-steps" class="section section-soft">
       <div class="container">
-        <div class="section-header">
-          <span class="section-step">Part 4 &bull; What You Can Do Next</span>
-          <h2>Pick the pace that feels comfortable today</h2>
-          <p>
-            You don't need to move your life savings on visit #1. Choose one of three clear ways forward.
-          </p>
+        <div class="section-head">
+          <span class="step-kicker">04 &bull; What To Do Next</span>
+          <h2>Choose your pace.</h2>
         </div>
 
-        <div class="next-steps-grid">
-          <!-- Option 1: Zero-commitment preview -->
+        <div class="next-grid">
           <div class="next-card">
-            <div class="next-effort">0 minutes &bull; No sign-up</div>
-            <h3>1. Explore a Sample Plan</h3>
-            <p>
-              Curious what the dashboard actually looks like inside? Click through a realistic sample account right here on this page — no email or phone number asked.
-            </p>
+            <span class="time-pill">0 min &bull; No login</span>
+            <h3>1. Test-drive a sample account</h3>
+            <p>Click around Aina's KL sample dashboard right here — no email needed.</p>
             <button type="button" class="btn btn-secondary btn-full" data-open-modal="sample-modal">
-              Open Interactive Sample
+              Open Live Demo
             </button>
           </div>
 
-          <!-- Option 2: Start tiny -->
-          <div class="next-card featured-next">
-            <div class="next-featured-ribbon">Most Popular First Step</div>
-            <div class="next-effort">3 minutes &bull; Start with RM 50</div>
-            <h3>2. Build Your Free Plan</h3>
-            <p>
-              Create your personalized goal roadmap first, review the exact halal funds inside it, and decide later if you want to fund it with RM 50 via FPX / DuitNow.
-            </p>
+          <div class="next-card featured">
+            <span class="popular-tag">Recommended</span>
+            <span class="time-pill">3 min &bull; From RM 50</span>
+            <h3>2. Create your free halal plan</h3>
+            <p>See your personalized fund mix first. Top up RM 50 via DuitNow whenever ready.</p>
             <button type="button" class="btn btn-primary btn-full" data-open-modal="start-modal">
-              Build My Personalized Plan &rarr;
+              Start My Plan &rarr;
             </button>
           </div>
 
-          <!-- Option 3: Talk / Read Checklist -->
           <div class="next-card">
-            <div class="next-effort">2 minutes &bull; Save for later</div>
-            <h3>3. Get the Halal Money Starter Guide</h3>
-            <p>
-              Still comparing options? Grab our 1-page checklist explaining Emergency Funds, Sukuk vs. ASB/Tabung Haji, and Zakat basics in plain English.
-            </p>
+            <span class="time-pill">1 min &bull; Cheat sheet</span>
+            <h3>3. Read the MY Halal Checklist</h3>
+            <p>Quick guide on sequencing Debt, Tabung Haji / ASB, Sukuk, and Zakat.</p>
             <button type="button" class="btn btn-secondary btn-full" data-open-modal="guide-modal">
-              View 1-Page Starter Checklist
+              View 4-Step Guide
             </button>
           </div>
         </div>
 
-        <!-- Quick 4-Question Plain-English FAQ -->
-        <div class="faq-block">
-          <div class="faq-intro">
-            <h3>4 honest answers before you decide</h3>
-            <p>The exact questions first-time visitors usually ask before trusting a financial platform.</p>
-          </div>
-
-          <div class="faq-list">
-            <details class="faq-item" open>
-              <summary>Who certifies that Mizan is truly Shariah-compliant?</summary>
-              <p>
-                Every portfolio is reviewed and audited annually by an independent Shariah Advisory panel registered with Securities Commission Malaysia standards, following AAOIFI screening rules. You can download the Shariah certificate for every fund right inside the app.
-              </p>
+        <!-- Compact 2x2 / Accordion FAQ -->
+        <div class="faq-wrap">
+          <h3 class="faq-heading">Quick answers</h3>
+          <div class="faq-grid">
+            <details class="faq-card">
+              <summary>How is Mizan certified halal?</summary>
+              <p>Audited annually by an SC Malaysia-registered Shariah adviser using strict AAOIFI screening.</p>
             </details>
 
-            <details class="faq-item">
-              <summary>What happens to my money if Mizan shuts down?</summary>
-              <p>
-                Mizan never holds your money in our company bank account. Your cash and fund units are held in a segregated custodian trust account under your name with a licensed trustee — meaning your assets remain legally yours even if Mizan ceased operations.
-              </p>
+            <details class="faq-card">
+              <summary>Is my money safe if Mizan closes?</summary>
+              <p>Yes. Assets sit in an independent licensed trustee custodian account under your own name.</p>
             </details>
 
-            <details class="faq-item">
-              <summary>Is my money locked in, or are there withdrawal penalties?</summary>
-              <p>
-                Zero lock-in and RM 0 withdrawal fee. Cash Shield withdrawals arrive in your Malaysian bank account within 1 business day, and investment portfolio withdrawals settle within 3–4 business days.
-              </p>
+            <details class="faq-card">
+              <summary>How does it compare to ASB or Tabung Haji?</summary>
+              <p>Great alongside them! Use TH/ASB for core local savings, and Mizan for flexible goal pots &amp; global halal equities.</p>
             </details>
 
-            <details class="faq-item">
-              <summary>Do I need to be Muslim to use Mizan?</summary>
-              <p>
-                Not at all! Over a quarter of ethical investors choose Shariah-screened portfolios simply because they avoid high-debt companies, weapons, gambling, and tobacco. You can turn Zakat tracking off with one click.
-              </p>
+            <details class="faq-card">
+              <summary>Any lock-in or withdrawal fees?</summary>
+              <p>Zero lock-in, RM 0 exit fee. Withdraw back to Maybank, CIMB, Bank Islam, or any local bank anytime.</p>
             </details>
           </div>
         </div>
@@ -677,200 +537,169 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <strong>Mizan Ethical Wealth</strong>
-        <p>Clear, transparent Shariah-compliant financial planning designed so first-time visitors understand every ringgit.</p>
+    <div class="container footer-row">
+      <div class="footer-left">
+        <strong>Mizan Malaysia</strong>
+        <span>Simple, riba-free financial planning from Kuala Lumpur.</span>
       </div>
-      <div class="footer-links">
+      <div class="footer-nav">
         <a href="#what-it-does">What It Does</a>
-        <a href="#who-it-helps">Who It Helps</a>
-        <a href="#relevance-check">30-Sec Check</a>
+        <a href="#who-it-helps">Who It's For</a>
+        <a href="#fit-check">Fit Check</a>
         <a href="#next-steps">Next Steps</a>
       </div>
     </div>
   </footer>
 
-  <!-- MODAL 1: Interactive Sample Dashboard Preview (Zero Sign-Up) -->
+  <!-- MODAL 1: Sample Dashboard -->
   <div class="modal-backdrop" id="sample-modal" hidden aria-hidden="true">
     <div class="modal-dialog modal-lg" role="dialog" aria-modal="true" aria-labelledby="sample-modal-title">
-      <div class="modal-header">
+      <div class="modal-head">
         <div>
-          <span class="section-step">Live Sample Account &bull; Aina, 28 (Kuala Lumpur)</span>
-          <h2 id="sample-modal-title">Inside a real Mizan dashboard</h2>
+          <span class="step-kicker">Demo Account &bull; Aina, 28 (KL)</span>
+          <h2 id="sample-modal-title">Sample Mizan Dashboard</h2>
         </div>
-        <button type="button" class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+        <button type="button" class="close-btn" data-close-modal aria-label="Close">&times;</button>
       </div>
 
-      <div class="modal-body">
-        <div class="sample-summary-strip">
-          <div>
-            <span>Total Halal Net Worth</span>
-            <strong>RM 18,640.00</strong>
+      <div class="demo-stats">
+        <div>
+          <span>Net Worth</span>
+          <strong>RM 18,640</strong>
+        </div>
+        <div>
+          <span>Halal Return</span>
+          <strong class="text-jade">+RM 1,190 (+6.8%)</strong>
+        </div>
+        <div>
+          <span>1448H Zakat</span>
+          <strong>RM 0 (Below RM 29k nisab)</strong>
+        </div>
+      </div>
+
+      <div class="demo-pots">
+        <div class="demo-pot">
+          <div class="demo-pot-head">
+            <strong>🛡️ Emergency Tabung</strong>
+            <span class="rate-tag">Cash Shield &bull; 3.6%</span>
           </div>
-          <div>
-            <span>Total Halal Profit Earned</span>
-            <strong class="text-emerald">+RM 1,190.00 (+6.8%)</strong>
+          <div class="demo-nums">
+            <span>RM 7,500 / RM 9,000</span>
+            <strong>83%</strong>
           </div>
-          <div>
-            <span>Zakat Status (1448H)</span>
-            <strong>Below RM 29k Nisab &bull; RM 0 due</strong>
-          </div>
+          <div class="progress-bar"><span style="width: 83%"></span></div>
+          <small>RM 200/mo DuitNow AutoDebit &bull; 1-day cashout</small>
         </div>
 
-        <div class="sample-goals-grid">
-          <div class="sample-goal-card">
-            <div class="sample-goal-top">
-              <strong>1. Emergency Buffer</strong>
-              <span class="badge-soft">Cash Shield &bull; 3.6% p.a.</span>
-            </div>
-            <div class="sample-goal-amounts">
-              <span>RM 7,500 <small>/ RM 9,000 goal</small></span>
-              <span>83%</span>
-            </div>
-            <div class="mini-progress"><span style="width: 83%"></span></div>
-            <p class="sample-note">Auto-saves RM 200 every 28th via DuitNow AutoDebit. Next-day withdrawal enabled.</p>
+        <div class="demo-pot">
+          <div class="demo-pot-head">
+            <strong>🏠 Rumah Pertama (2029)</strong>
+            <span class="rate-tag">Balanced &bull; 5.8%</span>
           </div>
-
-          <div class="sample-goal-card">
-            <div class="sample-goal-top">
-              <strong>2. First Home Deposit (2029)</strong>
-              <span class="badge-soft">Balanced Sukuk &bull; 5.8% p.a.</span>
-            </div>
-            <div class="sample-goal-amounts">
-              <span>RM 11,140 <small>/ RM 35,000 goal</small></span>
-              <span>32%</span>
-            </div>
-            <div class="mini-progress"><span style="width: 32%"></span></div>
-            <p class="sample-note">60% Global &amp; Malaysian Sukuk, 40% Screened Halal Equities. 100% Shariah audited.</p>
+          <div class="demo-nums">
+            <span>RM 11,140 / RM 35,000</span>
+            <strong>32%</strong>
           </div>
+          <div class="progress-bar"><span style="width: 32%"></span></div>
+          <small>60% MY/Global Sukuk &bull; 40% Shariah ETFs</small>
         </div>
+      </div>
 
-        <div class="modal-footer-cta">
-          <p>Want a dashboard structured around your own goals?</p>
-          <button type="button" class="btn btn-primary" id="switch-sample-to-start">
-            Create My Own Plan (Free) &rarr;
-          </button>
-        </div>
+      <div class="modal-foot">
+        <span>Ready to customize your own pots?</span>
+        <button type="button" class="btn btn-primary btn-sm" id="switch-sample-to-start">
+          Build My Plan &rarr;
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- MODAL 2: Guided 3-Step "Start Your Plan" Onboarding Preview -->
+  <!-- MODAL 2: 3-Minute Guided Start -->
   <div class="modal-backdrop" id="start-modal" hidden aria-hidden="true">
     <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="start-modal-title">
-      <div class="modal-header">
+      <div class="modal-head">
         <div>
-          <span class="section-step">3-Minute Guided Setup</span>
-          <h2 id="start-modal-title">Here is exactly what happens next</h2>
+          <span class="step-kicker">3-Minute Onboarding</span>
+          <h2 id="start-modal-title">Your next 3 steps</h2>
         </div>
-        <button type="button" class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+        <button type="button" class="close-btn" data-close-modal aria-label="Close">&times;</button>
       </div>
 
-      <div class="modal-body">
-        <div class="plan-recap-banner" id="modal-plan-recap">
-          <strong>Your selected draft:</strong> <span id="modal-recap-text">Cash Shield Plan &bull; RM 250/mo</span>
-        </div>
+      <div class="recap-pill" id="modal-plan-recap">
+        Draft: <strong id="modal-recap-text">Cash Shield &bull; RM 250/mo</strong>
+      </div>
 
-        <ol class="onboarding-steps">
-          <li>
-            <strong>Name your first goal (1 min)</strong>
-            <p>Pick Emergency Fund, Home, Umrah/Hajj, or Long-Term Wealth — and see your exact halal fund breakdown before committing a cent.</p>
-          </li>
-          <li>
-            <strong>Quick MyKad / Passport verification (2 min)</strong>
-            <p>Required by financial regulations so your assets are legally held in your own name at the custodian trustee.</p>
-          </li>
-          <li>
-            <strong>Fund with RM 50+ whenever you are ready</strong>
-            <p>Deposit via FPX or DuitNow, or explore the app at RM 0 until your next payday.</p>
-          </li>
-        </ol>
+      <ol class="step-list">
+        <li><strong>Name your tabung (30s)</strong> — Review exact halal funds upfront.</li>
+        <li><strong>MyKad / Passport eKYC (2m)</strong> — Protects your units under your name.</li>
+        <li><strong>Top up RM 50+ via DuitNow</strong> — Or explore at RM 0 first.</li>
+      </ol>
 
-        <form id="QuickStartForm" class="quickstart-form">
-          <label for="starter-goal-name">Give your first goal a name</label>
-          <input
-            type="text"
-            id="starter-goal-name"
-            placeholder="e.g., My 6-Month Rainy Day Cushion"
-            value="My 6-Month Rainy Day Cushion"
-            required
-          />
-          <label for="starter-email">Where should we send your saved plan link?</label>
-          <input
-            type="email"
-            id="starter-email"
-            placeholder="you@example.com"
-            required
-          />
-          <button type="submit" class="btn btn-primary btn-full">
-            Save My Personalized Roadmap &rarr;
-          </button>
-        </form>
+      <form id="QuickStartForm" class="quick-form">
+        <input
+          type="text"
+          id="starter-goal-name"
+          placeholder="Goal name (e.g., Emergency Tabung)"
+          value="Emergency Tabung"
+          aria-label="Goal name"
+          required
+        />
+        <input
+          type="email"
+          id="starter-email"
+          placeholder="Your email to save this plan"
+          aria-label="Email address"
+          required
+        />
+        <button type="submit" class="btn btn-primary btn-full">
+          Save My Free Plan &rarr;
+        </button>
+      </form>
 
-        <div id="quickstart-success" class="quickstart-success" hidden>
-          <div class="success-check" aria-hidden="true">&check;</div>
-          <h3>Your roadmap is ready!</h3>
-          <p id="quickstart-success-msg">
-            We've prepared your personalized halal goal breakdown. Zero obligation — fund with RM 50 whenever you feel ready.
-          </p>
-          <button type="button" class="btn btn-secondary" data-close-modal>Back to Welcome Page</button>
-        </div>
+      <div id="quickstart-success" class="success-box" hidden>
+        <div class="check-circle" aria-hidden="true">&check;</div>
+        <h3>Plan saved!</h3>
+        <p id="quickstart-success-msg">Check your inbox whenever you're ready to start with RM 50.</p>
+        <button type="button" class="btn btn-secondary btn-sm" data-close-modal>Done</button>
       </div>
     </div>
   </div>
 
-  <!-- MODAL 3: 1-Page Halal Money Starter Checklist -->
+  <!-- MODAL 3: 4-Step Malaysian Halal Checklist -->
   <div class="modal-backdrop" id="guide-modal" hidden aria-hidden="true">
     <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="guide-modal-title">
-      <div class="modal-header">
+      <div class="modal-head">
         <div>
-          <span class="section-step">Save-For-Later Reference</span>
-          <h2 id="guide-modal-title">The 4-Step Halal Money Order of Operations</h2>
+          <span class="step-kicker">1-Minute Cheat Sheet</span>
+          <h2 id="guide-modal-title">MY Halal Money Order</h2>
         </div>
-        <button type="button" class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+        <button type="button" class="close-btn" data-close-modal aria-label="Close">&times;</button>
       </div>
 
-      <div class="modal-body">
-        <p class="guide-intro">
-          Even if you don't sign up for Mizan today, follow this simple sequence to put your finances on solid ethical footing:
-        </p>
-        <ul class="checklist-items">
-          <li>
-            <input type="checkbox" id="chk-1" checked />
-            <label for="chk-1">
-              <strong>Step 1: Clear high-cost personal or card debt first</strong>
-              <span>No ethical investment reliably beats 15%–18% credit card charges. Pay those down first.</span>
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-2" />
-            <label for="chk-2">
-              <strong>Step 2: Park 3–6 months of expenses in a riba-free liquid account</strong>
-              <span>Use an Islamic Cash Management account (like Mizan Cash Shield or Tabung Haji) so emergencies never force you into debt.</span>
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-3" />
-            <label for="chk-3">
-              <strong>Step 3: Match 2–5 year goals with Sukuk-heavy balanced funds</strong>
-              <span>Money needed for a house deposit or wedding within a few years shouldn't sit 100% in volatile stocks.</span>
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-4" />
-            <label for="chk-4">
-              <strong>Step 4: Invest 5+ year wealth in diversified global Shariah equities + track Zakat</strong>
-              <span>Time smooths out market ups and downs while keeping your purchasing power ahead of inflation.</span>
-            </label>
-          </li>
-        </ul>
-        <div class="modal-footer-cta">
-          <p>Ready to put Step 2 or Step 3 in motion?</p>
-          <button type="button" class="btn btn-primary" id="switch-guide-to-start">
-            Start with RM 50 &rarr;
-          </button>
-        </div>
+      <ul class="check-steps">
+        <li>
+          <input type="checkbox" id="c1" checked />
+          <label for="c1"><strong>1. Clear 15–18% card / personal debt</strong> — Highest guaranteed relief.</label>
+        </li>
+        <li>
+          <input type="checkbox" id="c2" />
+          <label for="c2"><strong>2. Build 3–6 mo Emergency Tabung</strong> — Keep liquid in Cash Shield or TH.</label>
+        </li>
+        <li>
+          <input type="checkbox" id="c3" />
+          <label for="c3"><strong>3. Match 2–5 yr goals to Sukuk</strong> — Protect house/kahwin savings from big dips.</label>
+        </li>
+        <li>
+          <input type="checkbox" id="c4" />
+          <label for="c4"><strong>4. Diversify 5+ yr wealth globally + Zakat</strong> — Claim 100% MY tax rebate on Zakat paid.</label>
+        </li>
+      </ul>
+
+      <div class="modal-foot">
+        <span>Want to start Step 2 or 3 today?</span>
+        <button type="button" class="btn btn-primary btn-sm" id="switch-guide-to-start">
+          Start with RM 50 &rarr;
+        </button>
       </div>
     </div>
   </div>
